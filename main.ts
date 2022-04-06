@@ -2,6 +2,23 @@ let lit = false
 let flicker = 0
 input.onButtonPressed(Button.A, function () {
     lit = true
+    if (lit != true) {
+        basic.showLeds(`
+            . . # . .
+            . # # # .
+            . # # # .
+            . # # # .
+            . # # # .
+            `)
+    } else {
+        basic.showLeds(`
+            . . . . .
+            . # # # .
+            . # # # .
+            . # # # .
+            . # # # .
+            `)
+    }
 })
 input.onSound(DetectedSound.Loud, function () {
     basic.clearScreen()
